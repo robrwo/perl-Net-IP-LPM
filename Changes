@@ -6,6 +6,9 @@ Revision history for Perl extension Net::IP::LPM.
 
   - added missing META.json to the MANIFEST
 
+  [Documentation]
+  - added AI_POLICY.md
+
 1.11 Sun Sep 6, 2026
         - Fix CVE-2026-56015 by bounding prefix_length
 	- Fix CVE-2025-40910 by reverting back to inet_pton
