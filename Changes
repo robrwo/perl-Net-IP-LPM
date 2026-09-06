@@ -7,6 +7,8 @@ Revision history for Perl extension Net::IP::LPM.
   - added missing META.json to the MANIFEST
 
   [Documentation]
+  - updated README
+
   - added AI_POLICY.md
 
 1.11 Sun Sep 6, 2026
