@@ -304,11 +304,13 @@ L<Net::CIDR::Compare>
 
 =head1 AUTHOR
 
-Tomas Podermanski E<lt>tpoder@cis.vutbr.czE<gt>, Martin Ministr E<lt>leadersmash@email.czE<gt>, Brno University of Technology
+Tomas Podermanski <tpoder@cis.vutbr.cz>, Martin Ministr <leadersmash@email.cz>, Brno University of Technology
+
+Currently maintained by Robert Rothenberg <perl@rhizomnic.com>.
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2012, Brno University of Technology
+Copyright (C) 2012, 2026 Brno University of Technology
 
 This library is a free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
