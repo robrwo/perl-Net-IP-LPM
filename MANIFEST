@@ -11,4 +11,5 @@ t/02-performance.t
 t/03-prefix-length.t
 t/asns.txt
 lib/Net/IP/LPM.pm
+META.json
 META.yml                                 Module meta-data (added by MakeMaker)

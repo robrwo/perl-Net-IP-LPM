@@ -3,6 +3,8 @@ Revision history for Perl extension Net::IP::LPM.
   [Bug Fixes]
   - fixed CVE-2026-86287 with improved validation of prefixes
 
+  - added missing META.json to the MANIFEST
+
 1.11 Sun Sep 6, 2026
         - Fix CVE-2026-56015 by bounding prefix_length
 	- Fix CVE-2025-40910 by reverting back to inet_pton
