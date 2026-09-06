@@ -13,11 +13,11 @@ INCLUDE: const-xs.inc
 
 
 
-int 
+int
 lpm_init()
 
 
-int 
+int
 lpm_add_raw(handle, prefix, prefix_len, value)
 	int handle
 	SV *prefix
@@ -25,29 +25,27 @@ lpm_add_raw(handle, prefix, prefix_len, value)
 	SV *value
 
 
-SV * 
+SV *
 lpm_lookup_raw(handle, addr)
 	int handle
 	SV *addr
 
 
-SV * 
+SV *
 lpm_info(handle)
 	int handle
 
 
-SV * 
+SV *
 lpm_dump(handle)
 	int handle
 
 
-void 
+void
 lpm_finish(handle)
 	int handle
 
 
-void 
+void
 lpm_destroy(handle)
 	int handle
-
-
