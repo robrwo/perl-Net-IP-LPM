@@ -401,7 +401,7 @@ lpm_instance_t *instance;
 	return handle;
 }
 
-int lpm_add_raw(int handle, SV * svprefix, int prefix_len, SV *value) {
+int lpm_add_raw(int handle, SV * svprefix, IV prefix_len, SV *value) {
 lpm_instance_t *instance = lpm_instances[handle];
 STRLEN len;
 char * prefix;
@@ -421,10 +421,10 @@ char * prefix;
 	}
 
 	if (len == 4){
-		addPrefixToTrie((void *)prefix, prefix_len, value, &instance->pTrieIPV4);
+          addPrefixToTrie((void *)prefix, (int) prefix_len, value, &instance->pTrieIPV4);
 	}
 	else if (len == 16) {
-		addPrefixToTrie((void *)prefix, prefix_len, value, &instance->pTrieIPV6);
+          addPrefixToTrie((void *)prefix, (int) prefix_len, value, &instance->pTrieIPV6);
 	}
 	else{ // Corrupted input file
 		croak("Cannot add prefix %s", prefix);

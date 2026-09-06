@@ -169,6 +169,8 @@ sub add {
 		$prefix_bin = inet_pton(AF_INET6, $prefix);
 	}
 
+        croak "invalid prefix address '${prefix}'" unless defined $prefix_bin;
+
 	if (!defined($prefix_len)) {
 		if (length($prefix_bin) == 4) {
 			$prefix_len = 32;
@@ -176,6 +178,8 @@ sub add {
 			$prefix_len = 128;
 		}
 	}
+
+        croak "prefix length must be a decimal integer" unless $prefix_len =~ /^[0-9]+$/;
 
 	return lpm_add_raw($self->{handle}, $prefix_bin, $prefix_len, $value);
 }

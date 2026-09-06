@@ -21,7 +21,7 @@ int
 lpm_add_raw(handle, prefix, prefix_len, value)
 	int handle
 	SV *prefix
-	int prefix_len
+	IV prefix_len
 	SV *value
 
 
