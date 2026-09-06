@@ -302,6 +302,8 @@ L<Net::CIDR::Lookup>
 
 L<Net::CIDR::Compare>
 
+L<Net::Patricia>
+
 =head1 AUTHOR
 
 Tomas Podermanski <tpoder@cis.vutbr.cz>, Martin Ministr <leadersmash@email.cz>, Brno University of Technology

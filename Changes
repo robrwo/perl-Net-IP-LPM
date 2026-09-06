@@ -5,6 +5,7 @@ Revision history for Perl extension Net::IP::LPM.
 	- Fix CVE-2025-40910 by reverting back to inet_pton
 	- updated documentation with new maintainer
 	- updated metadata with git repository
+	- added Net::Patricia to SEE ALSO
 
 1.10 Mon Aug 3 2015
 	- Socket6 module is not required starting with perl 5.14.0
