@@ -67,4 +67,3 @@ else {
     copy ($fallback, $file) or die "Can't copy $fallback to $file: $!";
   }
 }
-
