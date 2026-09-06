@@ -13,3 +13,4 @@ LPM.o*
 lpm_lib.o*
 const-c.inc
 const-xs.inc
+Makefile.old
