@@ -10,9 +10,9 @@ require Exporter;
 
 #use Socket qw( AF_INET );
 #use Socket6 qw( inet_ntop inet_pton AF_INET6 );
-use if $] <  5.014000, Socket  => qw(inet_aton AF_INET);
+use if $] <  5.014000, Socket  => qw(AF_INET);
 use if $] <  5.014000, Socket6 => qw(inet_ntop inet_pton AF_INET6);
-use if $] >= 5.014000, Socket  => qw(inet_ntop inet_pton inet_aton AF_INET6 AF_INET);
+use if $] >= 5.014000, Socket  => qw(inet_ntop inet_pton AF_INET6 AF_INET);
 #use Data::Dumper;
 
 #our @ISA = qw(DB_File);
@@ -139,7 +139,7 @@ sub format_addr {
 		return undef;
 	}
 
-	if ((my $addr_bin = inet_aton($addr))) {
+	if ((my $addr_bin = inet_pton(AF_INET, $addr))) {
 		return $addr_bin;
 	} else {
 		return inet_pton(AF_INET6, $addr);
@@ -165,7 +165,7 @@ sub add {
 
 	($prefix, $prefix_len) = split('/', $prefix);
 
-	if (! ($prefix_bin = inet_aton($prefix)) ) {
+	if (! ($prefix_bin = inet_pton(AF_INET, $prefix)) ) {
 		$prefix_bin = inet_pton(AF_INET6, $prefix);
 	}
 
@@ -200,7 +200,7 @@ sub lookup {
 	my ($self, $addr) = @_;
 	my $addr_bin;
 
-	if (! ($addr_bin = inet_aton($addr)) ) {
+	if (! ($addr_bin = inet_pton(AF_INET, $addr)) ) {
 		$addr_bin = inet_pton(AF_INET6, $addr);
 	}
 
