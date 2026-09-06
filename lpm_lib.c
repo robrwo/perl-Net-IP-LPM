@@ -413,6 +413,13 @@ char * prefix;
 
 	prefix = SvPV(svprefix, len);
 
+	if ((len == 4 || len == 16)
+	    && (prefix_len < 0 || (STRLEN)prefix_len > len * 8)) {
+		croak("Net::IP::LPM: prefix length /%d out of range (max /%d)",
+		      prefix_len, (int)(len * 8));
+		return 0;
+	}
+
 	if (len == 4){
 		addPrefixToTrie((void *)prefix, prefix_len, value, &instance->pTrieIPV4);
 	}
