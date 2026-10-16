@@ -1,5 +1,11 @@
 Revision history for Perl extension Net::IP::LPM.
 
+  [Bug Fixes]
+  - Skip cloning the object into a new thread.
+
+  [Documentation]
+  - Added KNOWN ISSUES.
+
   [Toolchain]
   - Updated contributor metadata.
 
