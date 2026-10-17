@@ -1,5 +1,6 @@
 Revision history for Perl extension Net::IP::LPM.
 
+1.13 Sat 17 Oct 12:55:19 BST 2026
   [Bug Fixes]
   - Skip cloning the object into a new thread.
 
